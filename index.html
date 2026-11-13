@@ -163,15 +163,17 @@ mark.o{background:linear-gradient(transparent 60%,#ecc9e6 60% 92%,transparent 92
 .ab-badge{position:absolute;right:-6px;bottom:20px;background:var(--ink);color:#fff;border-radius:26px;padding:18px 24px;box-shadow:0 26px 46px -18px rgba(27,45,56,.7);max-width:220px}
 .ab-badge b{display:block;font:700 clamp(2.4rem,4vw,3.1rem)/1 var(--serif);color:var(--sun)}
 .ab-badge span{display:block;font-size:14px;line-height:1.35;color:rgba(255,255,255,.86);margin-top:4px}
-.dict{display:flex;align-items:baseline;flex-wrap:wrap;gap:6px 16px;margin-top:20px}
-.dict .w{font:700 clamp(3rem,6vw,4.6rem)/1 var(--serif);color:var(--ink);letter-spacing:-.02em}
-.dict .w i{font-style:normal;color:var(--orchid)}
-.dict .p{font-size:15px;color:var(--text)}
-.dict .p em{font-family:var(--serif);font-size:1.15rem;color:var(--ink)}
-.def{margin-top:20px;padding:18px 22px;border-left:5px solid var(--sun);border-radius:0 22px 22px 0;background:#fff;font:600 1.3rem/1.4 var(--serif);color:var(--ink)}
-.def sup{font:800 12px var(--sans);color:var(--teal);margin-right:6px}
 .ab-p{margin-top:20px;font-size:1.1rem;max-width:54ch}
 .ab-p strong{color:var(--ink)}
+.ab-p2{margin-top:12px}
+.pillars{display:grid;gap:12px;margin-top:28px}
+.pillars li{display:flex;align-items:center;gap:16px;padding:16px 20px 16px 16px;background:#fff;border-radius:22px;box-shadow:0 18px 34px -28px rgba(27,45,56,.6);transition:transform .35s var(--ease),box-shadow .35s}
+.pillars li:hover{transform:translateX(6px);box-shadow:0 24px 40px -26px rgba(27,45,56,.6)}
+.pillars .ic{width:52px;height:52px;border-radius:16px;background:var(--sun);color:var(--ink);display:grid;place-items:center;flex:none;transition:transform .5s var(--ease)}
+.pillars li:nth-child(2) .ic{background:var(--orchid);color:#fff}.pillars li:nth-child(3) .ic{background:#9fcbef}
+.pillars li:hover .ic{transform:rotate(-8deg) scale(1.06)}
+.pillars b{display:block;font:700 1.2rem/1.2 var(--serif);color:var(--ink)}
+.pillars span{display:block;font-size:15px;line-height:1.45;margin-top:2px}
 .ticks{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(200px,100%),1fr));gap:12px 18px;margin-top:24px}
 .ticks li{display:flex;align-items:center;gap:12px;font-weight:700;color:var(--ink)}
 .ticks .i{width:28px;height:28px;padding:5px;border-radius:50%;background:var(--sun);color:var(--ink);stroke-width:2.6}
@@ -388,7 +390,6 @@ mark.o{background:linear-gradient(transparent 60%,#ecc9e6 60% 92%,transparent 92
   .spec-cta .btn{flex:1 1 100%}
   .cta3-mail b{font-size:.74rem}
   .cta3-ph{width:min(260px,86%)}
-  .dict .w{font-size:2.6rem}
   .plan .w{font-size:2.6rem}
   .hchip{padding-right:16px}
 }
@@ -528,11 +529,15 @@ mark.o{background:linear-gradient(transparent 60%,#ecc9e6 60% 92%,transparent 92
     </div>
     <div data-r="right">
       <span class="eyebrow">Who we are</span>
-      <div class="dict" id="about-h"><span class="w" role="heading" aria-level="2">bou<i>·</i>tique</span><span class="p">/buːˈtiːk/ <em>noun</em></span></div>
-      <p class="def"><sup>1.</sup>A small company that offers highly specialized services or products.</p>
-      <p class="ab-p">That is exactly what we are. <strong>Get Fresh Carpet Cleaning</strong> is an owner operated boutique carpet cleaning company in Calgary, focused on hypoallergenic, VOC free and residue free cleaning that is safe for your family and the indoor air you breathe.</p>
-      <ul class="ticks"><li><svg class="i"><use href="#i-check"/></svg>Hypoallergenic</li><li><svg class="i"><use href="#i-check"/></svg>VOC free</li><li><svg class="i"><use href="#i-check"/></svg>Residue free</li><li><svg class="i"><use href="#i-check"/></svg>Safe for kids and pets</li></ul>
-      <div class="ab-cta"><a class="btn btn-ink btn-lg" href="https://getfreshcarpetcleaning.ca/quote/">Get an Instant Quote <svg class="i"><use href="#i-arrow"/></svg></a></div>
+      <h2 class="h2" id="about-h" style="margin-top:18px">Small by choice. <mark class="o">Specialized</mark> on purpose.</h2>
+      <p class="ab-p">Get Fresh is a family owned, owner operated boutique carpet cleaning company in Calgary. We focus on three things only: carpets, area rugs and upholstery.</p>
+      <p class="ab-p ab-p2">Every clean is hypoallergenic, VOC free and residue free, so it's safe for your family, your pets and the air you breathe at home.</p>
+      <ul class="pillars">
+        <li><span class="ic"><svg class="i"><use href="#i-user"/></svg></span><div><b>Owner operated</b><span>The owners do the work and stand behind every job.</span></div></li>
+        <li><span class="ic"><svg class="i"><use href="#i-spark"/></svg></span><div><b>Highly specialized</b><span>Carpets, area rugs and upholstery. Nothing else.</span></div></li>
+        <li><span class="ic"><svg class="i"><use href="#i-air"/></svg></span><div><b>Healthier indoor air</b><span>No soap, detergent, fragrance or residue left behind.</span></div></li>
+      </ul>
+      <div class="ab-cta"><a class="btn btn-ink btn-lg" href="https://getfreshcarpetcleaning.ca/quote/">Get an Instant Quote <svg class="i"><use href="#i-arrow"/></svg></a><a class="btn btn-line btn-lg" href="https://getfreshcarpetcleaning.ca/services/">View services</a></div>
     </div>
   </div>
 </section>
